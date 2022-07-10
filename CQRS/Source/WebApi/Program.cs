@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Repository.Context;
 
@@ -26,8 +27,9 @@ namespace WebApi
             IConfiguration? configuration = builder.Services.BuildServiceProvider()
                 .GetRequiredService<IConfiguration>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
-
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+
+            builder.Services.AddMediatR(typeof(Program).Assembly);
 
             var app = builder.Build();
 

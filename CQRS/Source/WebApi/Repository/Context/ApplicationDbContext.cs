@@ -9,6 +9,6 @@ namespace WebApi.Repository.Context
         {
         }
 
-        public DbSet<User>? Users{ get; set; }
+        public DbSet<User> Users { get; set; } = null!;
     }
 }

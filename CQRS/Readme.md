@@ -1,0 +1,1 @@
+https://medium.com/@Qr3n/implementing-cqrs-and-mediatr-with-asp-net-core-aab8d1805a5
